@@ -1,15 +1,19 @@
 import { useState } from "react";
+import Link from "next/link";
 
 export default function App() {
-  const names = ["Таня", "Маша", "Саша"];
-  const [greeting, setGreeting] = useState("Привет, МИР!");
+  const tasks = ["Таня", "Маша", "Саша"];
 
   return (
     <div>
-      <h1>{greeting}</h1>
+      <h1>Список задач</h1>
       <ul>
-        {names.map((name) => (
-          <li key={name}>{name}</li>
+        {tasks.map((task) => (
+          <li key={task}>
+            <Link href="/tasks/task">
+              <a>{task}</a>
+            </Link>
+          </li>
         ))}
       </ul>
     </div>
