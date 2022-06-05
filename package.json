@@ -1,0 +1,28 @@
+{
+  "name": "test__ne-naprasno",
+  "version": "1.0.0",
+  "description": "test Next.js",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SergeyDedikov/test__ne-naprasno.git"
+  },
+  "keywords": [
+    "Node",
+    "Next"
+  ],
+  "author": "SergeyDedikov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SergeyDedikov/test__ne-naprasno/issues"
+  },
+  "homepage": "https://github.com/SergeyDedikov/test__ne-naprasno#readme",
+  "dependencies": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "next": "12.0.7"
+  }
+}
