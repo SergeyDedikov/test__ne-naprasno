@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Head from "next/head";
 
 export const getStaticProps = async ({ params }) => {
   const res = await fetch(`https://sergeydedikov.github.io/data/data.json`);
@@ -27,15 +28,20 @@ export const getStaticPaths = async () => {
 
 export default function Task({ task }) {
   return (
-    <section>
-      <h1>{task.title}</h1>
-      <p>{task.description}</p>
-      <small>{task.date}</small>
-      <nav>
-        <Link href="/">
-          <a>Вернуться к списку задач</a>
-        </Link>
-      </nav>
-    </section>
+    <>
+      <Head>
+        <title>{task.title}</title>
+      </Head>
+      <main>
+        <h1>{task.title}</h1>
+        <p>{task.description}</p>
+        <small>{task.date}</small>
+        <nav>
+          <Link href="/">
+            <a>Вернуться к списку задач</a>
+          </Link>
+        </nav>
+      </main>
+    </>
   );
 }
