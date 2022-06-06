@@ -14,7 +14,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function App({ tasks }) {
+export default function Home({ tasks }) {
   return (
     <Layout>
       <Head>
