@@ -2,6 +2,7 @@ import Link from "next/link";
 import Head from "next/head";
 
 import Layout from "../../components/layout";
+import styles from "../../components/layout.module.css";
 
 export const getStaticProps = async ({ params }) => {
   const res = await fetch(`https://sergeydedikov.github.io/data/data.json`);
@@ -38,7 +39,7 @@ export default function Task({ task }) {
         <h1>{task.title}</h1>
         <p>{task.description}</p>
         <small>{task.date}</small>
-        <nav>
+        <nav className={styles.backToHome}>
           <Link href="/">
             <a>Вернуться к списку задач</a>
           </Link>

@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Head from "next/head";
 
+import Layout from "../components/layout";
+
 export async function getStaticProps() {
   const res = await fetch("https://sergeydedikov.github.io/data/data.json");
   const tasks = await res.json();
@@ -14,7 +16,7 @@ export async function getStaticProps() {
 
 export default function App({ tasks }) {
   return (
-    <>
+    <Layout>
       <Head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
@@ -36,6 +38,6 @@ export default function App({ tasks }) {
           ))}
         </ul>
       </main>
-    </>
+    </Layout>
   );
 }
