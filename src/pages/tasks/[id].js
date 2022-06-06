@@ -1,6 +1,8 @@
 import Link from "next/link";
 import Head from "next/head";
 
+import Layout from "../../components/layout";
+
 export const getStaticProps = async ({ params }) => {
   const res = await fetch(`https://sergeydedikov.github.io/data/data.json`);
   const tasks = await res.json();
@@ -28,7 +30,7 @@ export const getStaticPaths = async () => {
 
 export default function Task({ task }) {
   return (
-    <>
+    <Layout>
       <Head>
         <title>{task.title}</title>
       </Head>
@@ -42,6 +44,6 @@ export default function Task({ task }) {
           </Link>
         </nav>
       </main>
-    </>
+    </Layout>
   );
 }
