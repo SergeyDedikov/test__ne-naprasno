@@ -31,7 +31,7 @@ export default function Home({ tasks }) {
         <ul>
           {tasks.map((task) => (
             <li key={task.id}>
-              <Link href={`/tasks/${task.id}`}>
+              <Link href="/task/[id]" as={`/task/${task.id}`}>
                 <a>{task.title}</a>
               </Link>
             </li>
